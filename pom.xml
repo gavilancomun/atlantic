@@ -1,57 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.zkoss.theme</groupId>
+
+	<groupId>uk.co.his.zk.theme</groupId>
 	<artifactId>atlantic</artifactId>
-	<version>1.1.3-SNAPSHOT</version>
+	<version>1.0.0</version>
+
 	<properties>
 		<zk.version>8.0.0-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}</packname>
-	</properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <release.url>http://nexus.lan:8888/nexus/content/repositories/releases</release.url>
+    <snapshot.url>http://nexus.lan:8888/nexus/content/repositories/snapshots</snapshot.url>
+  </properties>
+
 	<packaging>jar</packaging>
+
 	<name>The Atlantic Theme</name>
 	<url>http://www.zkoss.org/themes/atlantic</url>
-	<scm>
-		<url>http://mavensync.zkoss.org/maven2</url>
-	</scm>
 	<description>The Atlantic Theme</description>
-	<licenses>
-		<license>
-			<name>GNU General Public License, Version 2.0</name>
-			<url>http://www.gnu.org/licenses/gpl.html</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-			<id>zkteam</id>
-			<name>ZK Team</name>
-			<email>info@zkoss.org</email>
-			<url>http://www.zkoss.org</url>
-			<organization>Potix</organization>
-			<organizationUrl>http://www.zkoss.org</organizationUrl>
-			<roles>
-				<role>architect</role>
-				<role>developer</role>
-			</roles>
-			<timezone>8</timezone>
-			<properties>
-				<picUrl>http://www.zkoss.org</picUrl>
-			</properties>
-		</developer>
-	</developers>
-	<repositories>
-		<repository>
-			<id>ZK CE</id>
-			<name>ZK CE Repository</name>
-			<url>http://mavensync.zkoss.org/maven2</url>
-		</repository>
-		<repository>
-			<id>ZK PE/EE Evaluation</id>
-			<url>http://mavensync.zkoss.org/eval/</url>
-		</repository>
-	</repositories>
+
 	<pluginRepositories>
 		<pluginRepository>
 			<id>zkmaven</id>
@@ -59,6 +29,7 @@
 			<url>http://mavensync.zkoss.org/maven2/</url>
 		</pluginRepository>
 	</pluginRepositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
@@ -73,6 +44,7 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<testOutputDirectory>${project.build.directory}/classes</testOutputDirectory>
 		<resources>
@@ -80,6 +52,7 @@
 				<directory>${project.basedir}/src/main/resources</directory>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.zkoss.maven</groupId>
@@ -94,16 +67,18 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<!-- Compile java -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.3</version>
 				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
+
 			<!-- Build jar -->
 			<plugin>
 				<groupId>org.apache.felix</groupId>
@@ -130,6 +105,7 @@
 					</instructions>
 				</configuration>
 			</plugin>
+
 			<!-- Pack zips -->
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -145,36 +121,6 @@
 						<configuration>
 							<descriptors>
 								<descriptor>assembly/sources.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-					<!-- Build bin.zip -->
-					<execution>
-						<id>bin</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<finalName>${project.artifactId}-bin${packname}</finalName>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>assembly/bin.xml</descriptor>
-							</descriptors>
-						</configuration>
-					</execution>
-					<!-- Build src.zip -->
-					<execution>
-						<id>src</id>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<finalName>${project.artifactId}-src${packname}</finalName>
-							<appendAssemblyId>false</appendAssemblyId>
-							<descriptors>
-								<descriptor>assembly/src.xml</descriptor>
 							</descriptors>
 						</configuration>
 					</execution>
@@ -194,5 +140,18 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>
+  </build>
+ 
+  <distributionManagement>
+    <repository>
+      <id>releases</id>
+      <url>${release.url}</url>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>snapshots</id>
+      <url>${snapshot.url}</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 </project>
