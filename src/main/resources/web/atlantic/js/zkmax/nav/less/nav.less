@@ -6,13 +6,13 @@
 	padding: 0;
 	list-style: none;
 }
-.itemSelected() {
+.itemSelected(@level) {
 	.z-navitem-selected .z-navitem-content {
 		color: @navSelectedColor;
-		background: @navSelectedBackground;
+		background: darken(@navBackground, (@level - 1) * 5.6);
 		&:hover {
 			color: @navSelectedHoverColor;
-			background: @navSelectedHoverBackground;
+			background: darken(@navBackground, (@level - 1) * 5.6);
 		}
 	}
 }
@@ -21,7 +21,6 @@
 	.z-navitem-content {
 		&:hover {
 			color: @navHoverColor;
-//			background: @navHoverBackground;
 		}
 		&[disabled]:hover {
 			color: @navColor;
@@ -54,6 +53,7 @@
 	// overall style
 	> ul { //first level
 		.navLevel(1);
+	  .itemSelected(1);
 
 		.z-nav-content,
 		.z-navitem-content {
@@ -63,16 +63,17 @@
 			display: none;
 			width: auto;
 			.navLevel(2);
+	    .itemSelected(2);
 			.z-nav-content,
 			.z-navitem-content {
 				font-weight: @fontWeightSemiBold;
 			}
 			ul { //third level
 				.navLevel(3);
+        .itemSelected(3);
 			}
 		}
 	}
-	.itemSelected();
 	
 	// horizontal style
 	&-horizontal {
