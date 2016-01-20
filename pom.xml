@@ -6,9 +6,8 @@
 	<groupId>uk.co.his.zk.theme</groupId>
 	<artifactId>atlantic</artifactId>
 	<version>1.0.7</version>
-
 	<properties>
-		<zk.version>8.0.0-Eval</zk.version>
+		<zk.version>8.0.1-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}</packname>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
