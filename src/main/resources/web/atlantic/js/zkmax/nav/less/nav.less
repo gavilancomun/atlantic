@@ -32,6 +32,7 @@
 	.z-navseparator {
 		background: darken(@navBackground, (@level - 1) * 5.6);
     margin-left: ((@level - 1) * @navLevelIndent);
+    border-top: 1px solid @navBorderColor; 
 	}
 	.z-nav-content:before,
 	.z-navseparator:before {
@@ -180,6 +181,7 @@
 // Nav and Navitem
 .z-nav,
 .z-navitem {
+  background: white;
 	&-content {
 		.fontStyle(@contentFontFamily, @baseFontSize, @baseFontWeight, @navColor);
 		display: block;
