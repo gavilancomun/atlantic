@@ -5,7 +5,8 @@
 
 	<groupId>uk.co.his.zk.theme</groupId>
 	<artifactId>atlantic</artifactId>
-	<version>1.0.7</version>
+	<version>1.0.8</version>
+
 	<properties>
 		<zk.version>8.0.1-Eval</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
@@ -17,9 +18,8 @@
 
 	<packaging>jar</packaging>
 
-	<name>The Atlantic Theme</name>
-	<url>http://www.zkoss.org/themes/atlantic</url>
-	<description>The Atlantic Theme</description>
+	<name>Modified Atlantic</name>
+	<description>Modified ZK Atlantic Theme</description>
 
 	<pluginRepositories>
 		<pluginRepository>
@@ -36,6 +36,7 @@
 			<version>${zk.version}</version>
 			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkmax</artifactId>
