@@ -5,7 +5,7 @@
 
 	<groupId>uk.co.his.zk.theme</groupId>
 	<artifactId>atlantic</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.9</version>
 
 	<properties>
 		<zk.version>8.0.1-Eval</zk.version>

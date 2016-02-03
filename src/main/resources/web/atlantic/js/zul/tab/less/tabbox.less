@@ -279,7 +279,7 @@
 	display: block;
 	border: 1px solid @baseBorderColor;
 	padding: @paddingSize - 1;
-	line-height: @headerHeight - @paddingSize * 2;
+//  line-height: @headerHeight - @paddingSize * 2;
 	background: @tabBackground;
 	text-align: center;
 	position: relative;
@@ -291,7 +291,8 @@
 	}
 
 	&:hover {
-		background: @tabHoverBackground;
+//		background: @tabHoverBackground;
+    color: @tabHoverBackground;
 	}
 
 	&-text {
@@ -300,6 +301,9 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+    &:hover {
+      color: @tabHoverBackground;
+    }
 	}
 
 	&-image {
@@ -332,13 +336,14 @@
 		margin: auto;
 	}
 	&-selected {
-		background: @baseBackground;
+//		background: @baseBackground;
+		background: #f1f1f1;
 		
 		&:hover {
-			background: @baseBackground;
+//			background: @baseBackground;
 		}
 		.z-tab-text {
-			font-weight: @fontWeightSemiBold;
+//			font-weight: @fontWeightSemiBold;
 			color: @tabSelectedColor;
 			cursor: default;
 		}

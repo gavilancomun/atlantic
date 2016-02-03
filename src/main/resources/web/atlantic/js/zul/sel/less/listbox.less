@@ -79,7 +79,8 @@
 	border-top: 1px solid @meshTitleBorderColor;
 	border-left: 1px solid @meshTitleBorderColor;
 	padding: 0;
-	background: @meshTitleBackground;
+//	background: @meshTitleBackground;
+	background: #f1f1f1;
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
@@ -307,9 +308,9 @@
 }
 //content
 .z-listheader-content {
-	.fontStyle(@titleFontFamily, @meshTitleFontSize, @fontWeightSemiBold, @meshTitleColor);
+	.fontStyle(@titleFontFamily, @meshTitleFontSize, @fontWeightSemiBold, #333333);
 	padding: @paddingSmall @paddingSize;
-	line-height: @headerHeight - @paddingSmall * 2;
+//	line-height: @headerHeight - @paddingSmall * 2;
 	position: relative;
 	overflow: hidden;
 }
