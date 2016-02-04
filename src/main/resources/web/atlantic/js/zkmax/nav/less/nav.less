@@ -362,9 +362,12 @@
 		display: block;
 		min-width: 180px;
 	}
+	.z-navitem-selected .z-navitem-content {
+		color: @navSelectedColor;
+  }
 	.z-nav-content,
 	.z-navitem-content {
-		font-weight: @fontWeightSemiBold;
+		font-weight: @baseFontWeight;
 		border-top-width: 0;
 		padding-top: @paddingSize;
 	}
