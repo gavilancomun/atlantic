@@ -248,6 +248,24 @@
 		a, a:visited, a:hover {
 			text-decoration: none;
 		}
+    .z-button {
+      margin-top: 1px;
+      margin-bottom: 1px;
+      color: @buttonColor !important;
+      background-color: buttonface;
+      &:hover {
+        color: @hoverColor !important;
+        background: @hoverBackground;
+        * {
+          color: @hoverColor !important;
+          background-color: @hoverBackground;
+        }
+      }
+      * {
+        color: @buttonColor !important;
+        background-color: buttonface;
+      }
+    }
 	}
 	a, a:visited, a:hover {
 		text-decoration: none;
