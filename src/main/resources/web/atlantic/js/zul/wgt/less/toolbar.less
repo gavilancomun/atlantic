@@ -61,14 +61,11 @@
 	line-height: @buttonHeight - @paddingSmall * 2; //for vertical center
 	position: relative;
 	cursor: pointer;
+  background: @grayLighter;
 
 	&:hover {
-		border-color: @hoverBorderColor;
-		background: @hoverBackground;
-		.boxShadow(inset 0 -1px 0 @hoverShadowColor);
-		
 		.z-toolbarbutton-content {
-			color: @hoverColor;
+			color: @hoverBlue;
 		}
 	}
 	&:active {
@@ -93,11 +90,15 @@
 		}
 	}
 	&-checked {
-		border-color: @focusBorderColor;
-		background: @checkedBackground;
+		border-color: @gray;
+		background: @grayLighter;
+    color: @hoverBlue;
+    .z-toolbarbutton-content {
+      color: @hoverBlue;
+    }
 	}
 	&-content {
-		.fontStyle(@contentFontFamily, @baseFontSize, @fontWeightSemiBold, @toolbarButtonColor);
+		.fontStyle(@contentFontFamily, @baseFontSize, @fontWeightNormal, @grayDarker);
 		white-space:nowrap;
 	}
 }
