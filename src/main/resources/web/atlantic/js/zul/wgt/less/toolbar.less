@@ -61,7 +61,7 @@
 	line-height: @buttonHeight - @paddingSmall * 2; //for vertical center
 	position: relative;
 	cursor: pointer;
-  background: @grayLighter;
+  background: @navBackground;
 
 	&:hover {
 		.z-toolbarbutton-content {
@@ -90,8 +90,8 @@
 		}
 	}
 	&-checked {
-		border-color: @gray;
-		background: @grayLighter;
+		border-color: transparent;
+		background: @navBackground;
     color: @hoverBlue;
     .z-toolbarbutton-content {
       color: @hoverBlue;
