@@ -92,7 +92,7 @@
 	&-checked {
 		border-color: transparent;
 		background: @navBackground;
-    color: @hoverBlue;
+    color: @navSelectedColor;
     .z-toolbarbutton-content {
       color: @hoverBlue;
     }
@@ -102,3 +102,32 @@
 		white-space:nowrap;
 	}
 }
+// From inspection
+.z-calendars-month-header {
+//    background-color: #cce5f4;
+//    color: #0f3b82;
+    left: 0;
+    line-height: 15px;
+    position: absolute;
+    table-layout: fixed;
+    top: 0;
+    width: 100%;
+  .z-calendars-day-of-week {
+//    color: #0f3b82;
+    font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    padding: 1px;
+  }
+}
+.z-calendars-body {
+//    background: #7eaac6 none repeat scroll 0 0;
+}
+.z-calendars-inner {
+//    background: #cce5f4 none repeat scroll 0 0;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    margin: 0 1px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+

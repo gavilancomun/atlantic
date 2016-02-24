@@ -6,15 +6,15 @@
 }
 .popupHover() {
 	color: @menuPopupHoverColor;
-	background: @menuPopupHoverBackground;
+//	background: @menuPopupHoverBackground;
 }
 .active() {
-	color: @menuActiveColor;
-	background: @menuActiveBackground;
+	color: @menuPopupHoverColor;
+//	background: @menuActiveBackground;
 }
 .popupActive() {
-	color: @menuPopupActiveColor;
-	background: @menuPopupActiveBackground;
+	color: @menuPopupHoverColor;
+//	background: @menuPopupActiveBackground;
 }
 .restUl() {
 	border: 0;
@@ -183,6 +183,7 @@
 	left: 0;
 	top: 0;
 	white-space: nowrap;
+  border: 1px solid @gray;
 
 	ul {
 		.restUl();
@@ -202,7 +203,7 @@
 	.z-menuitem {
 		background: @menuPopupBackground;
 		&-content {
-			.fontStyle(@contentFontFamily, @baseFontSize, @baseFontWeight, @menuPopupColor);
+			.fontStyle(@contentFontFamily, @baseFontSize, @baseFontWeight, @grayDarker);
 			min-height: @barHeight;
 			padding: (@barHeight - @iconHeight - 2)/2 @paddingSize - 1; //remain @iconHeight(24px) inside, total @barHeight(40px)
 			padding-right: @paddingLarge - 1;
